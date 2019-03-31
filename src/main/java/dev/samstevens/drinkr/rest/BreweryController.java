@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.*;
 
-@RestController()
+@RestController
 public class BreweryController {
 
     @Autowired

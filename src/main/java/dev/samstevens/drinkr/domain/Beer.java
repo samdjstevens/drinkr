@@ -2,11 +2,12 @@ package dev.samstevens.drinkr.domain;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
 public class Beer {
-    enum Type { IPA, PALE_ALE, STOUT, PORTER, SOUR, OTHER }
+    public enum Type { IPA, PALE_ALE, STOUT, PORTER, SOUR, OTHER }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,11 +21,11 @@ public class Beer {
     private String name;
 
     @Column
-    @NotEmpty
+    @NotNull
     private Type type;
 
     @Column
-    @NotEmpty
+    @NotNull
     private double abv;
 
     @Column
